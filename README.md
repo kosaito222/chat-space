@@ -1,4 +1,4 @@
-# README
+# DB設計
 
 ## Chatspace 要件定義（未完成）
 |ChatSpace機能|機能詳細|エンティティ|リレーション|
