@@ -1,1 +1,15 @@
-<サイドバー>
+.side-bar
+  .side-bar__user-name
+    .top-items
+      .top-items__name masa
+      %ul.top-items__icons
+        %li.top--items__new-chat-group
+          %a{"href": "#", "alt": "new-chat-group"}
+            = icon('fas', 'edit')
+        %li.top--items__edit-account
+          %a{"href": "#", "alt": "edit-account"}
+            = icon('fas', 'cog')
+  .side-bar__group-list
+    .group-container
+      .group-container__group-name techcamp
+      %p.group-container__new-message まだメッセージがありません
