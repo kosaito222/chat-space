@@ -149,9 +149,15 @@
 
   &__message-form {
     background-color: #d2d2d2;
+
+    // @mixinの定義
+    @mixin form--height($height) {
+      height: $height;
+    }
     
     .form {
-      height: 90px;
+      @include form--height(90px);
+      // height: 90px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -159,17 +165,17 @@
       
       &__contents {
         width: 100%;
-        height: 50px;
-        background-color: #ffffff;
-        display: flex;
-        align-items: center;
+        // height: 50px;
+        // background-color: #ffffff;
+        // display: flex;
+        // align-items: center;
         position: relative;
         
         .inputContent {
           width: 100%;
           border: none;
           height: 50px;
-          padding: 0 10px;
+          padding: 0 45px 0 10px;
         }
 
         .inputImage {
