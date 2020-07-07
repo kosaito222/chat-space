@@ -41,8 +41,8 @@
         align-items: center;
         justify-content: flex-end;
         
-        li {
-          a {
+        .top--items__new-chat-group, .top--items__edit-account {
+          .edit-group-icon, .edit-account-icon {
             color: #ffffff;
             margin-left: 5px;
           }

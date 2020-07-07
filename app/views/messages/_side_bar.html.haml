@@ -1,13 +1,14 @@
 .side-bar
   .side-bar__user-name
     .top-items
-      .top-items__name masa
+      .top-items__name
+        = current_user.name
       %ul.top-items__icons
         %li.top--items__new-chat-group
-          %a{"href": "#", "alt": "new-chat-group"}
+          %a.edit-group-icon{"href": "#", "alt": "new-chat-group"}
             = icon('fas', 'edit')
         %li.top--items__edit-account
-          %a{"href": "#", "alt": "edit-account"}
+          = link_to edit_user_path(current_user), class: "edit-account-icon" do
             = icon('fas', 'cog')
   .side-bar__group-list
     .group-container
