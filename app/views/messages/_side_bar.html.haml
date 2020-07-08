@@ -5,12 +5,16 @@
         = current_user.name
       %ul.top-items__icons
         %li.top--items__new-chat-group
-          %a.edit-group-icon{"href": "#", "alt": "new-chat-group"}
+          = link_to new_group_path, class: "edit-group-icon" do
             = icon('fas', 'edit')
         %li.top--items__edit-account
           = link_to edit_user_path(current_user), class: "edit-account-icon" do
             = icon('fas', 'cog')
   .side-bar__group-list
-    .group-container
-      .group-container__group-name techcamp
-      %p.group-container__new-message まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group-container
+        = link_to '#' do
+          .group-container__group-name
+            = group.name
+          %p.group-container__new-message
+            まだメッセージがありません
