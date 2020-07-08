@@ -1,10 +1,14 @@
 .chat-main
   .chat-main__group-info
     .group-info
-      .group-info__group-name techcamp
-      .group-info__group-member Member : masa
+      .group-info__group-name
+        = @group.name
+      .group-info__group-member
+        Member : 
+        - @group.users.each do |user|
+          = user.name
     .group-edit-btn
-      %a{"href": "#", "alt": "group-edit-btn"} Edit
+      = link_to 'Edit', edit_group_path(@group.id)
 
   .chat-main__message-list
     = render @messages
