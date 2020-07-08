@@ -11,6 +11,10 @@
           = link_to edit_user_path(current_user), class: "edit-account-icon" do
             = icon('fas', 'cog')
   .side-bar__group-list
-    .group-container
-      .group-container__group-name techcamp
-      %p.group-container__new-message まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group-container
+        = link_to '#' do
+          .group-container__group-name
+            = group.name
+          %p.group-container__new-message
+            まだメッセージがありません
