@@ -35,3 +35,6 @@ gem "haml-rails", ">= 1.0", '<= 2.0.1'
 gem 'font-awesome-sass'
 gem 'devise'
 gem 'pry-rails'
+gem 'carrierwave'
+# ImageMagickが必要なので事前にbrew install imagemagickする
+gem 'mini_magick'
