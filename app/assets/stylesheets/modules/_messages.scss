@@ -59,16 +59,18 @@
     .group-container {
       padding: 20px 0 40px;
       text-decoration: none;
-      
-      &__group-name {
-        color: #ffffff;
-        font-size: 15px;
-        margin-bottom: 5px;
-      }
-      
-      &__new-message {
-        color: #ffffff;
-        font-size: 11px;
+      &__link {
+        text-decoration: none;
+        &__group-name {
+          color: #ffffff;
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+        
+        &__new-message {
+          color: #ffffff;
+          font-size: 11px;
+        }
       }
     }
   }
