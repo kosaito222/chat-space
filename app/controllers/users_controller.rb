@@ -1,5 +1,14 @@
 class UsersController < ApplicationController
 
+  def index
+    # whereメソッドであいまい検索、where.noで自分以外という条件、limitで最大10件取得
+    @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).limit(10)
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   def edit
   end
 
