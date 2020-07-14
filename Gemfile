@@ -42,3 +42,4 @@ gem 'font-awesome-sass'
 gem 'carrierwave'
 # ImageMagickが必要なので事前にbrew install imagemagickする
 gem 'mini_magick'
+gem 'jquery-rails'
