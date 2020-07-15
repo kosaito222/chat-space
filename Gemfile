@@ -14,8 +14,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'pry-rails'
-  gem 'devise'
   gem 'rspec-rails', '~> 4.0.0.beta2'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
@@ -35,6 +33,10 @@ group :test do
   gem 'webdrivers'
 end
 
+group :production do
+  gem 'unicorn', '5.4.1'
+end
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "haml-rails", ">= 1.0", '<= 2.0.1'
@@ -44,6 +46,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
 
-group :production do
-  gem 'unicorn', '5.4.1'
-end
+
+gem 'pry-rails'
+gem 'devise'
