@@ -1,9 +1,10 @@
 $(function(){
+
   function buildHTML(message) {
     if (message.image) {
       // messageに画像が含まれていた場合の処理
       let html = `
-      <div class="message-field">
+      <div class="message-field" data-message-id=${message.id}>
         <div class="message-field__member-box">
           <div class="member-name">${message.user_name}</div>
           <div class="timestamp">${message.created_at}</div>
@@ -16,7 +17,7 @@ $(function(){
     } else {
       // messageに画像が含まれていない場合の処理
       let html = `
-      <div class="message-field">
+      <div class="message-field" data-message-id=${message.id}>
         <div class="message-field__member-box">
           <div class="member-name">${message.user_name}</div>
           <div class="timestamp">${message.created_at}</div>
@@ -43,7 +44,7 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.chat-main__message-list').append(html).animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});;
+      $('.chat-main__message-list').append(html).animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
       $('form')[0].reset();
       $('.form__btn').prop('disabled',false);
     })
