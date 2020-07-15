@@ -43,3 +43,7 @@ gem 'carrierwave'
 # ImageMagickが必要なので事前にbrew install imagemagickする
 gem 'mini_magick'
 gem 'jquery-rails'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
